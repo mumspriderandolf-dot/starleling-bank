@@ -3,25 +3,27 @@
 <head>
   <title>Starleling Bank</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body{
       margin:0;
       font-family:Arial;
-      background:black;
+      background:#0a0a0a;
       color:white;
     }
 
     .header{
-      background:#0d1b2a;
-      padding:20px;
+      background:linear-gradient(to right,#000428,#004e92);
+      padding:25px;
       text-align:center;
     }
 
     .card{
-      background:#1b263b;
+      background:#111827;
       margin:20px;
       padding:20px;
       border-radius:20px;
+      box-shadow:0 0 10px rgba(0,0,0,0.5);
     }
 
     button{
@@ -35,8 +37,25 @@
       font-size:16px;
     }
 
+    button:hover{
+      opacity:0.9;
+    }
+
     h1,h2,h3{
       margin:0 0 10px 0;
+    }
+
+    .balance{
+      font-size:40px;
+      font-weight:bold;
+      color:#00bfff;
+    }
+
+    .transaction{
+      background:#1f2937;
+      padding:15px;
+      border-radius:15px;
+      margin-top:10px;
     }
   </style>
 </head>
@@ -51,29 +70,119 @@
 <div class="card">
   <h2>Maria Rodriguez</h2>
   <p>Current Account</p>
-  <h1>$3,000,000</h1>
+  <p>United States</p>
+  <div class="balance">$3,000,000</div>
 </div>
 
 <div class="card">
   <h3>Visa Card</h3>
   <p>4532 8890 1123 4821</p>
   <p>Expiry: 12/30</p>
+  <p>CVV: 224</p>
 </div>
 
 <div class="card">
   <h3>Quick Actions</h3>
 
-  <button>Send Money</button>
-  <button>Check Balance</button>
-  <button>Crypto Wallet</button>
-  <button>Loan Request</button>
-  <button>Freeze Card</button>
+  <button onclick="loginDemo()">Login Securely</button>
+  <button onclick="sendMoney()">Send Money</button>
+  <button onclick="checkBalance()">Check Balance</button>
+  <button onclick="cryptoWallet()">Crypto Wallet</button>
+  <button onclick="loanRequest()">Loan Request</button>
+  <button onclick="freezeCard()">Freeze Card</button>
+  <button onclick="createAccount()">Create Account</button>
+</div>
+
+<div class="card">
+  <h3>Recent Transactions</h3>
+
+  <div class="transaction">
+    Incoming Transfer +$45,000
+  </div>
+
+  <div class="transaction">
+    Salary Deposit +$120,000
+  </div>
+
+  <div class="transaction">
+    Card Purchase -$2,450
+  </div>
+</div>
+
+<div class="card">
+  <h3>Notifications</h3>
+
+  <div class="transaction">
+    Transfer completed successfully
+  </div>
+
+  <div class="transaction">
+    Crypto wallet connected
+  </div>
+
+  <div class="transaction">
+    Security login verified
+  </div>
 </div>
 
 <div class="card">
   <h3>Admin Dashboard</h3>
+
   <p>Admin: Patrick Jackson</p>
+
+  <button onclick="adminFreeze()">Freeze Account</button>
+  <button onclick="adminMoney()">Add Money</button>
+  <button onclick="adminDelete()">Delete User</button>
+  <button onclick="adminTransfers()">View Transfers</button>
 </div>
+
+<script>
+
+function loginDemo(){
+  alert("Secure login successful");
+}
+
+function sendMoney(){
+  alert("Demo transfer of $45,000 completed successfully");
+}
+
+function checkBalance(){
+  alert("Current Demo Balance: $3,000,000");
+}
+
+function cryptoWallet(){
+  alert("Crypto Wallet Opened");
+}
+
+function loanRequest(){
+  alert("Loan request approved successfully");
+}
+
+function freezeCard(){
+  alert("Visa card ending 4821 frozen successfully");
+}
+
+function createAccount(){
+  alert("New demo account created");
+}
+
+function adminFreeze(){
+  alert("Admin froze an account");
+}
+
+function adminMoney(){
+  alert("Admin added demo funds successfully");
+}
+
+function adminDelete(){
+  alert("User deleted from demo banking");
+}
+
+function adminTransfers(){
+  alert("Viewing all demo transfers");
+}
+
+</script>
 
 </body>
 </html>
